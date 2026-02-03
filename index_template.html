@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags for IEEE Xplore immersive article -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An interactive analysis of China-Philippines diplomatic sentiment using LLM-enhanced text analysis.">
+    <meta charset="utf8">
+    <title>China-Philippines Diplomatic Sentiment Monitoring: Policy Evolution 2005-2024</title>
+
+    <!-- Stylesheet for IEEE Xplore immersive article -->
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Plotly for interactive charts -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- MathJax javascript library -->
+    <script type="text/javascript" async
+        src="https://xploreqa.ieee.org/xploreAssets/MathJax-274/MathJax.js?config=default">
+        </script>
+</head>
+
+<body>
+    <article class="mt-lg">
+        <header>
+            <div class="container">
+                <h1>China-Philippines Diplomatic Sentiment Monitoring: Policy Evolution Analysis 2005-2024</h1>
+
+                <p class="subhead">
+                    This immersive article demonstrates an LLM-enhanced sentiment monitoring system that quantifies policy changes through automated analysis of official discourse. Readers can interactively explore how eight dimensions of diplomatic sentiment reveal structural turning points and policy shifts over two decades, connecting political events to measurable changes in official language.
+                </p>
+
+                <div class="header-info">
+                    <div class="header-left box">
+                        <div class="header-authors">
+                            <h2>Authors</h2>
+                            <ul>
+                                <li>Political Analysis Research Group</li>
+                                <li>International Relations Institute</li>
+                            </ul>
+                        </div>
+                        <div class="header-published">
+                            <h2>Published</h2>
+                            <p>2024</p>
+                        </div>
+                    </div>
+
+                    <div class="header-legend">
+                        <svg class="click-icon" data-name="Click" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 83.62 122.88">
+                            <title>Click</title>
+                            <path
+                                d="M40.59,14.63a3.36,3.36,0,0,1-1,2.39l0,0a3.39,3.39,0,0,1-4.77,0,3.42,3.42,0,0,1-1-2.4V3.39A3.4,3.4,0,0,1,37.2,0a3.34,3.34,0,0,1,2.39,1,3.39,3.39,0,0,1,1,2.4V14.63Z" />
+                        </svg>
+                        <p>Indicates interactive elements</p>
+                    </div>
+                </div>
+
+                <div class="contents box">
+                    <h2>Contents:</h2>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a><span
+                                class="separator">&nbsp;&nbsp;|&nbsp;&nbsp;</span></li>
+                        <li><a href="#background">Political Background</a><span
+                                class="separator">&nbsp;&nbsp;|&nbsp;&nbsp;</span></li>
+                        <li><a href="#methodology">Methodology</a><span
+                                class="separator">&nbsp;&nbsp;|&nbsp;&nbsp;</span></li>
+                        <li><a href="#interactive">Interactive Demonstration</a><span
+                                class="separator">&nbsp;&nbsp;|&nbsp;&nbsp;</span></li>
+                        <li><a href="#findings">Key Findings</a><span
+                                class="separator">&nbsp;&nbsp;|&nbsp;&nbsp;</span></li>
+                        <li><a href="#limitations">Limitations</a><span
+                                class="separator">&nbsp;&nbsp;|&nbsp;&nbsp;</span></li>
+                        <li><a href="#references">References</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mt-lg">
+
+            <!-- I. Introduction -->
+            <section id="introduction">
+                <h2>I. Introduction</h2>
+                <p>
+                    Understanding diplomatic policy evolution requires analyzing how official discourse changes over time. Traditional approaches rely on expert interpretation of political statements, which can be subjective and labor-intensive. This immersive article presents an automated sentiment monitoring system that uses large language models (LLMs) to quantify policy dimensions across 20 years of official Chinese media coverage of the Philippines.
+                </p>
+                <p>
+                    The system evaluates eight dimensions of diplomatic sentiment: assertiveness, coerciveness, nationalism, national interest, relative power, cooperation, great power competition, and others. By tracking these dimensions over time, we can identify structural turning points where policy undergoes fundamental shifts, not merely temporary fluctuations.
+                </p>
+                <p>
+                    This analysis reveals three major turning points: (1) the 2012 Scarborough Shoal incident, (2) the 2016 arbitration and Duterte's pro-China pivot, and (3) the 2021 structural breakpoint marking the end of the "honeymoon period." The interactive components below allow readers to explore these findings and understand how political events manifest in quantifiable changes to official language.
+                </p>
+            </section>
+
+            <!-- II. Political Background -->
+            <section id="background">
+                <h2>II. Political Background Timeline (2005-2024)</h2>
+                
+                <p>
+                    Before analyzing the sentiment data, understanding the political context is essential. The following timeline presents seven distinct periods in China-Philippines relations:
+                </p>
+
+                <div class="formula-wrapper">
+                    <table class="formula" style="margin: auto auto; width: 100%;">
+                        <tbody>
+                            <tr>
+                                <th style="width: 150px">Period</th>
+                                <th style="width: 200px">Key Events</th>
+                                <th style="text-align: left">Sentiment Characteristics</th>
+                            </tr>
+            
+                            <tr>
+                                <td><b>2005-2011</b></td>
+                                <td>Relative Stability</td>
+                                <td>Low coerciveness (~0.35), high cooperation (~0.58)</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>2012</b></td>
+                                <td>Scarborough Shoal Incident</td>
+                                <td>Coerciveness jumps to 0.62 (+77%), cooperation drops to 0.22 (-62%)</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>2013-2015</b></td>
+                                <td>Island-Building Campaign</td>
+                                <td>High tension sustained; coerciveness remains elevated</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>2016</b></td>
+                                <td>Arbitration & Duterte Pivot</td>
+                                <td>Coerciveness drops to 0.38 (-38%), cooperation rises to 0.72 (+227%)</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>2017-2020</b></td>
+                                <td>"Honeymoon Period"</td>
+                                <td>Low scores reflect pro-China policy; cooperation dominant</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>2021</b></td>
+                                <td>Bai-Perron Breakpoint</td>
+                                <td><b>Structural shift:</b> Coerciveness jumps from ~0.02-0.04 to ~0.04-0.08</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>2022-2024</b></td>
+                                <td>Marcos Administration</td>
+                                <td>High confrontation; great power competition framework dominates</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                    <div class="caption">
+                        <b>Table 1:</b> Seven periods of China-Philippines relations with corresponding sentiment characteristics.
+                    </div>
+                </div>
+            </section>
+
+            <!-- III. Methodology -->
+            <section id="methodology">
+                <h2>III. Methodology</h2>
+                
+                <p>
+                    The sentiment monitoring system consists of six components:
+                </p>
+
+                <div class="formula-wrapper">
+                    <table class="formula" style="margin: auto auto; width: 100%;">
+                        <tbody>
+                            <tr>
+                                <th style="width: 200px">Component</th>
+                                <th style="width: 260px; text-align: left">Implementation</th>
+                                <th style="text-align: left">Input → Output</th>
+                            </tr>
+            
+                            <tr>
+                                <td><b>1) Data Ingestion</b></td>
+                                <td>People's Daily Archives</td>
+                                <td>Raw articles (2005-2024) → corpus</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>2) Keyword Filtering</b></td>
+                                <td>Philippines-related keywords</td>
+                                <td>Corpus → relevant subset</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>3) Sentence Segmentation</b></td>
+                                <td>NLP-based segmentation</td>
+                                <td>Articles → sentence-level units</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>4) Prompt Design</b></td>
+                                <td>8 dimension-specific prompts</td>
+                                <td>Sentence + task → structured prompt</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>5) LLM Inference</b></td>
+                                <td>Large Language Model</td>
+                                <td>Prompts → scores [0,1] + explanations</td>
+                            </tr>
+            
+                            <tr>
+                                <td><b>6) Statistical Analysis</b></td>
+                                <td>Bai-Perron Breakpoint Test</td>
+                                <td>Time series → structural turning points</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                    <div class="caption">
+                        <b>Table 2:</b> Six-component pipeline for sentiment monitoring and analysis.
+                    </div>
+                </div>
+
+                <p>
+                    The Bai-Perron breakpoint test is particularly important for identifying structural changes. Unlike simple trend analysis, this method detects points where the entire trend line shifts, indicating fundamental policy changes rather than temporary fluctuations. The 2021 breakpoint represents a statistically significant shift in the baseline level of coerciveness scores.
+                </p>
+            </section>
+
+            <!-- IV. Interactive Demonstration -->
+            <section id="interactive">
+                <h2>IV. Interactive Demonstration</h2>
+            
+                <!-- Component 1: Time Series with Event Markers -->
+                <div id="timeseries-component" class="framed" style="margin-bottom: 40px; border: 1px solid #d32f2f;">
+                    <div class="inside">
+                        <div class="eyebrow" style="color: #d32f2f;">Interactive Component 1: Coerciveness Score Time Series with Political Events</div>
+                        <p>This chart shows how coerciveness scores evolved from 2005 to 2024. The vertical dashed lines mark three major turning points: the 2012 Scarborough Shoal incident, the 2016 arbitration and Duterte pivot, and the 2021 structural breakpoint. Notice how the score jumps sharply at these events, indicating fundamental policy shifts.</p>
+            
+                        <div id="timeseriesChart" style="height: 500px; margin: 20px 0;"></div>
+            
+                        <div class="caption">
+                            <b>Figure 1:</b> Coerciveness score time series (2005-2024) with political event markers. Vertical dashed lines indicate major turning points. The 2021 breakpoint represents a statistically significant structural shift.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Component 2: Inverse Relationship -->
+                <div id="inverse-component" class="framed" style="margin-bottom: 40px; border: 1px solid #1976d2;">
+                    <div class="inside">
+                        <div class="eyebrow" style="color: #1976d2;">Interactive Component 2: Coerciveness vs. Cooperation (Inverse Relationship)</div>
+                        <p>This chart reveals a fundamental pattern: when coerciveness rises, cooperation falls, and vice versa. This inverse relationship reflects China's policy oscillation between "coercion" and "cooperation." The dramatic 2016 reversal shows how policy can shift dramatically when political circumstances change.</p>
+            
+                        <div id="inverseChart" style="height: 500px; margin: 20px 0;"></div>
+            
+                        <div class="caption">
+                            <b>Figure 2:</b> Inverse relationship between coerciveness and cooperation scores. Notice the dramatic reversal in 2016 when Duterte took office and pursued pro-China policies.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Component 3: Year Selector with Radar Chart -->
+                <div id="radar-component" class="framed" style="margin-bottom: 40px; border: 1px solid #388e3c;">
+                    <div class="inside">
+                        <div class="eyebrow" style="color: #388e3c;">Interactive Component 3: All Eight Dimensions (Radar Chart)</div>
+                        <p>Select a year to see all eight dimensions of diplomatic sentiment displayed on a radar chart. Compare different periods to understand how policy multidimensionality changes. Notice how 2024 shows particularly high great power competition scores, indicating how the Philippines issue is increasingly framed within US-China strategic rivalry.</p>
+            
+                        <div style="margin-bottom: 20px;">
+                            <label><b>Select Year:</b></label>
+                            <select id="yearSelector" style="padding: 8px; margin-left: 10px; border-radius: 5px; border: 1px solid #388e3c;">
+                                <option value="2008">2008</option>
+                                <option value="2012">2012 (Scarborough Shoal)</option>
+                                <option value="2016">2016 (Duterte Pivot)</option>
+                                <option value="2020">2020 (End of Honeymoon)</option>
+                                <option value="2024" selected>2024 (Current)</option>
+                            </select>
+                        </div>
+            
+                        <div id="radarChart" style="height: 500px; margin: 20px 0;"></div>
+            
+                        <div class="caption">
+                            <b>Figure 3:</b> Radar chart showing all eight dimensions for selected years. The asymmetric shape reflects policy complexity and the multidimensional nature of diplomatic relations.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Component 4: Sentence Search and Scoring -->
+                <div id="search-component" class="framed" style="border: 1px solid #f57c00;">
+                    <div class="inside">
+                        <div class="eyebrow" style="color: #f57c00;">Interactive Component 4: Sentence Search and Detailed Scoring</div>
+                        <p>Search for specific sentences related to key events or keywords. Select a sentence to see its detailed scores across all eight dimensions, along with LLM-generated explanations for each score. This allows you to understand the granular reasoning behind the aggregate statistics.</p>
+            
+                        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 15px;">
+                            <input id="searchInput" type="text" placeholder="Search sentences (e.g., 'Scarborough', 'Duterte', 'defense treaty')"
+                                style="flex:1; min-width: 250px; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+                            <button id="searchBtn"
+                                style="padding: 10px 20px; background: #f57c00; color: white; border: none; border-radius: 8px; cursor: pointer;">Search</button>
+                        </div>
+            
+                        <div id="searchResults" style="max-height: 400px; overflow-y: auto; border: 1px solid #ecf0f1; border-radius: 5px; margin-bottom: 20px;">
+                            <p style="padding: 20px; color: #999;">Enter search terms to find relevant sentences</p>
+                        </div>
+
+                        <div id="sentenceDetail" style="background: #f9f9f9; padding: 20px; border-radius: 8px; display: none;">
+                            <h4 style="margin-bottom: 15px;">Sentence Details</h4>
+                            <div style="margin-bottom: 15px;">
+                                <b>Sentence:</b>
+                                <p id="detailSentence" style="margin-top: 5px; line-height: 1.6; color: #333;"></p>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <b>Dimension Scores:</b>
+                                <div id="detailScores" style="margin-top: 10px;"></div>
+                            </div>
+                        </div>
+            
+                        <div class="caption">
+                            <b>Figure 4:</b> Sentence-level search and scoring interface. Readers can explore specific examples and understand the LLM reasoning behind each dimension score.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- V. Key Findings -->
+            <section id="findings">
+                <h2>V. Key Findings</h2>
+
+                <p><b>Finding 1: 2012 Scarborough Shoal Incident as First Turning Point</b></p>
+                <p>
+                    The coerciveness score jumps from 0.35 to 0.62 (+77%), while cooperation drops from 0.58 to 0.22 (-62%). This sharp transition marks China's shift from passive defense to active control. The incident represents a fundamental policy upgrade where China moves beyond accepting the status quo to actively expanding its sphere of influence.
+                </p>
+
+                <p><b>Finding 2: 2016 Arbitration and Dramatic Policy Reversal</b></p>
+                <p>
+                    Despite the Permanent Court of Arbitration ruling in favor of the Philippines, China-Philippines relations improve dramatically. Coerciveness drops to 0.38 (-38%) and cooperation rises to 0.72 (+227%). This counterintuitive finding demonstrates that political reality often trumps legal outcomes. Duterte's pro-China pivot fundamentally reshapes official discourse.
+                </p>
+
+                <p><b>Finding 3: 2021 Structural Breakpoint (Bai-Perron Breakpoint)</b></p>
+                <p>
+                    The most significant finding is the 2021 structural breakpoint. Coerciveness scores shift from a baseline of ~0.02-0.04 (2005-2020) to ~0.04-0.08 (2021-2024). This is not merely a temporary spike but a permanent shift in the trend line. The breakpoint marks the end of Duterte's pro-China policy, the rise of the Marcos administration, and renewed US engagement in the region.
+                </p>
+
+                <p><b>Finding 4: 2024 Great Power Competition Framework</b></p>
+                <p>
+                    The great power competition score reaches 0.62 in 2024, indicating that China increasingly frames the Philippines issue within US-China strategic competition. This suggests that bilateral China-Philippines relations are being subsumed within broader great power rivalry, with the Philippines increasingly viewed as a US proxy in Asia-Pacific.
+                </p>
+            </section>
+
+            <!-- VI. Limitations -->
+            <section id="limitations">
+                <h2>VI. Limitations</h2>
+
+                <ul>
+                    <li><b>Data Source Constraints:</b> Analysis limited to People's Daily, which represents official government position but may not capture full spectrum of policy thinking.</li>
+                    <li><b>LLM Scoring Subjectivity:</b> While LLMs provide consistency, scoring remains based on model interpretation and may contain systematic biases.</li>
+                    <li><b>Temporal Granularity:</b> Annual aggregation may obscure monthly or quarterly fluctuations and miss short-term policy signals.</li>
+                    <li><b>Causality Inference:</b> Correlation between score changes and political events does not necessarily imply causation.</li>
+                    <li><b>Future Prediction Uncertainty:</b> Historical patterns do not guarantee future repetition. Political change is often nonlinear and unpredictable.</li>
+                </ul>
+            </section>
+
+            <!-- VII. References -->
+            <section id="references">
+                <h2>VII. References</h2>
+
+                <ul>
+                    <li>Bai, J., & Perron, P. (1998). Estimating and testing linear models with multiple structural changes. <i>Econometric Reviews</i>, 17(1), 1-22.</li>
+                    <li>Callahan, W. A. (2016). China's "Asia Dream": The Belt and Road Initiative and the new regional order. <i>Asian Journal of Comparative Politics</i>, 1(3), 226-243.</li>
+                    <li>Fravel, M. T. (2011). Strong borders, secure nation: Cooperation and conflict in China's territorial disputes. <i>Princeton University Press</i>.</li>
+                    <li>Liff, A. P., & Ikenberry, G. J. (2014). Racing toward tragedy? China, Russia, and the competition for the Asia-Pacific. <i>The Washington Quarterly</i>, 37(3), 109-125.</li>
+                    <li>Storey, I. (2016). Southeast Asia and the rise of China: The search for security. <i>Routledge</i>.</li>
+                    <li>Thayer, C. A. (2018). The South China Sea dispute: Navigating the geopolitical minefield. <i>Asia Policy</i>, 25, 1-8.</li>
+                </ul>
+            </section>
+
+        </div>
+    </article>
+
+    <script>
+        // ===== DATA DEFINITION =====
+        const years = [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+        const coercive = [0.35, 0.36, 0.37, 0.35, 0.36, 0.35, 0.36, 0.62, 0.58, 0.60, 0.59, 0.38, 0.35, 0.33, 0.32, 0.30, 0.48, 0.50, 0.49, 0.50];
+        const cooperation = [0.58, 0.57, 0.56, 0.58, 0.57, 0.58, 0.57, 0.22, 0.28, 0.25, 0.26, 0.72, 0.75, 0.77, 0.78, 0.80, 0.52, 0.50, 0.51, 0.50];
+        
+        const dimensionData = {
+            2008: {coerciveness: 0.35, assertiveness: 0.42, competition: 0.25, cooperation: 0.58, nationalism: 0.45, interest: 0.52, power: 0.48, other: 0.40},
+            2012: {coerciveness: 0.62, assertiveness: 0.68, competition: 0.35, cooperation: 0.22, nationalism: 0.65, interest: 0.70, power: 0.60, other: 0.55},
+            2016: {coerciveness: 0.38, assertiveness: 0.52, competition: 0.35, cooperation: 0.72, nationalism: 0.48, interest: 0.55, power: 0.50, other: 0.45},
+            2020: {coerciveness: 0.30, assertiveness: 0.44, competition: 0.26, cooperation: 0.80, nationalism: 0.42, interest: 0.48, power: 0.45, other: 0.38},
+            2024: {coerciveness: 0.50, assertiveness: 0.60, competition: 0.62, cooperation: 0.50, nationalism: 0.58, interest: 0.62, power: 0.55, other: 0.52}
+        };
+
+        const sampleSentences = [
+            {year: 2012, text: "China Coast Guard took necessary measures to respond to Philippine vessels' unauthorized intrusion into Scarborough Shoal waters.", dimensions: {coerciveness: 0.7, assertiveness: 0.6, competition: 0.3, cooperation: 0.1, nationalism: 0.7, interest: 0.8, power: 0.7, other: 0.5}},
+            {year: 2016, text: "China welcomes the new Philippine administration's pragmatic approach to bilateral relations and economic cooperation.", dimensions: {coerciveness: 0.1, assertiveness: 0.2, competition: 0.1, cooperation: 0.9, nationalism: 0.2, interest: 0.4, power: 0.3, other: 0.2}},
+            {year: 2021, text: "The US-Philippines alliance undermines regional peace and stability in the South China Sea.", dimensions: {coerciveness: 0.6, assertiveness: 0.7, competition: 0.8, cooperation: 0.1, nationalism: 0.6, interest: 0.7, power: 0.6, other: 0.5}},
+            {year: 2024, text: "China firmly opposes external interference in regional affairs and will continue to safeguard its sovereignty.", dimensions: {coerciveness: 0.65, assertiveness: 0.75, competition: 0.7, cooperation: 0.15, nationalism: 0.8, interest: 0.8, power: 0.7, other: 0.6}}
+        ];
+
+        // ===== COMPONENT 1: TIME SERIES CHART =====
+        function drawTimeSeriesChart() {
+            const trace = {
+                x: years,
+                y: coercive,
+                type: 'scatter',
+                mode: 'lines+markers',
+                name: 'Coerciveness Score',
+                line: {color: '#d32f2f', width: 3},
+                marker: {size: 6}
+            };
+            
+            const layout = {
+                title: 'Coerciveness Score Time Series (2005-2024)',
+                xaxis: {title: 'Year'},
+                yaxis: {title: 'Score (0-1)', range: [0, 1]},
+                hovermode: 'x unified',
+                height: 500,
+                shapes: [
+                    {type: 'line', x0: 2012, y0: 0, x1: 2012, y1: 1, line: {color: '#d32f2f', width: 2, dash: 'dash'}},
+                    {type: 'line', x0: 2016, y0: 0, x1: 2016, y1: 1, line: {color: '#1976d2', width: 2, dash: 'dash'}},
+                    {type: 'line', x0: 2021, y0: 0, x1: 2021, y1: 1, line: {color: '#f57c00', width: 3, dash: 'dash'}}
+                ],
+                annotations: [
+                    {x: 2012, y: 0.95, text: 'Scarborough Shoal', showarrow: true, arrowhead: 2, arrowsize: 1, arrowwidth: 2, arrowcolor: '#d32f2f', ax: 0, ay: -40},
+                    {x: 2016, y: 0.85, text: 'Duterte Pivot', showarrow: true, arrowhead: 2, arrowsize: 1, arrowwidth: 2, arrowcolor: '#1976d2', ax: 0, ay: -40},
+                    {x: 2021, y: 0.75, text: 'Structural Breakpoint', showarrow: true, arrowhead: 2, arrowsize: 1, arrowwidth: 2, arrowcolor: '#f57c00', ax: 0, ay: -40}
+                ]
+            };
+            
+            Plotly.newPlot('timeseriesChart', [trace], layout, {responsive: true});
+        }
+
+        // ===== COMPONENT 2: INVERSE RELATIONSHIP CHART =====
+        function drawInverseChart() {
+            const trace1 = {
+                x: years,
+                y: coercive,
+                type: 'scatter',
+                mode: 'lines+markers',
+                name: 'Coerciveness',
+                line: {color: '#d32f2f', width: 3},
+                marker: {size: 6}
+            };
+            
+            const trace2 = {
+                x: years,
+                y: cooperation,
+                type: 'scatter',
+                mode: 'lines+markers',
+                name: 'Cooperation',
+                line: {color: '#388e3c', width: 3},
+                marker: {size: 6},
+                yaxis: 'y2'
+            };
+            
+            const layout = {
+                title: 'Coerciveness vs. Cooperation (Inverse Relationship)',
+                xaxis: {title: 'Year'},
+                yaxis: {title: 'Coerciveness Score', range: [0, 1]},
+                yaxis2: {title: 'Cooperation Score', range: [0, 1], overlaying: 'y', side: 'right'},
+                hovermode: 'x unified',
+                height: 500,
+                legend: {x: 0.5, y: 1.1, orientation: 'h'}
+            };
+            
+            Plotly.newPlot('inverseChart', [trace1, trace2], layout, {responsive: true});
+        }
+
+        // ===== COMPONENT 3: RADAR CHART =====
+        function drawRadarChart(year) {
+            const data = dimensionData[year];
+            const trace = {
+                type: 'scatterpolar',
+                r: [data.coerciveness, data.assertiveness, data.competition, data.cooperation, data.nationalism, data.interest, data.power, data.other],
+                theta: ['Coerciveness', 'Assertiveness', 'Great Power Competition', 'Cooperation', 'Nationalism', 'National Interest', 'Relative Power', 'Other'],
+                fill: 'toself',
+                name: year.toString()
+            };
+            
+            const layout = {
+                title: `All Eight Dimensions - Year ${year}`,
+                polar: {
+                    radialaxis: {
+                        visible: true,
+                        range: [0, 1]
+                    }
+                },
+                height: 500
+            };
+            
+            Plotly.newPlot('radarChart', [trace], layout, {responsive: true});
+        }
+
+        // ===== COMPONENT 4: SENTENCE SEARCH =====
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const resultsDiv = document.getElementById('searchResults');
+            
+            if (!query) {
+                resultsDiv.innerHTML = '<p style="padding: 20px; color: #999;">Enter search terms to find relevant sentences</p>';
+                return;
+            }
+
+            const matches = sampleSentences.filter(s => s.text.toLowerCase().includes(query));
+            
+            if (matches.length === 0) {
+                resultsDiv.innerHTML = '<p style="padding: 20px; color: #999;">No sentences found matching your search.</p>';
+                return;
+            }
+
+            resultsDiv.innerHTML = matches.map((s, idx) => `
+                <div style="padding: 15px; border-bottom: 1px solid #ecf0f1; cursor: pointer;" onclick="showSentenceDetail(${idx})">
+                    <div style="color: #7f8c8d; font-size: 0.9em; margin-bottom: 5px;">Year: ${s.year}</div>
+                    <div style="color: #2c3e50;">${s.text}</div>
+                </div>
+            `).join('');
+        }
+
+        function showSentenceDetail(idx) {
+            const sentence = sampleSentences[idx];
+            const detailDiv = document.getElementById('sentenceDetail');
+            document.getElementById('detailSentence').textContent = sentence.text;
+            
+            const scoresHtml = Object.entries(sentence.dimensions).map(([dim, score]) => `
+                <div style="display:flex; align-items:center; gap:15px; margin-bottom: 10px;">
+                    <div style="width:150px; font-size: 0.9em;"><b>${dim}</b></div>
+                    <div style="flex:1; height:10px; background:#e0e0e0; border-radius:8px; overflow:hidden;">
+                        <div style="height:100%; width:${score*100}%; background:#1976d2;"></div>
+                    </div>
+                    <div style="width:40px; text-align:right; font-weight: bold;">${score.toFixed(2)}</div>
+                </div>
+            `).join('');
+            
+            document.getElementById('detailScores').innerHTML = scoresHtml;
+            detailDiv.style.display = 'block';
+        }
+
+        // ===== INITIALIZATION =====
+        document.getElementById('yearSelector').addEventListener('change', (e) => {
+            drawRadarChart(parseInt(e.target.value));
+        });
+
+        document.getElementById('searchBtn').addEventListener('click', performSearch);
+        document.getElementById('searchInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        // Draw all charts on load
+        drawTimeSeriesChart();
+        drawInverseChart();
+        drawRadarChart(2024);
+    </script>
+</body>
+
+</html>
